@@ -4,20 +4,9 @@ function capitalizeWords(str) {
   let result = [];
 
   for (let word of words) {
-    result.push(word.toUpperCase());
+    result.push(word[0].toUpperCase() + word.slice(1));
   }
   return result.join(" ");
 }
 
-console.log(capitalizeWords("hello hi hi world"));
-
-// another way
-
-function capitalizeWords(str) {
-  return str
-    .split(" ")
-    .map((word) => word.toUpperCase())
-    .join(" ");
-}
-
-console.log(capitalizeWords("hello ji  world"));
+console.log(capitalizeWords("hello ji world"));
